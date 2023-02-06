@@ -39,3 +39,6 @@ AppDataSource.initialize()
     });
 
 app.use('/', tasksRouter)
+app.get('/test', function (req, res) {
+    res.send('hello world')
+  })
