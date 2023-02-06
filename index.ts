@@ -30,6 +30,12 @@ export const AppDataSource = new DataSource({
     //
 })
 
+
+app.use('/', tasksRouter)
+app.get('/', function (req, res) {
+    res.send('hello world')
+})
+
 AppDataSource.initialize()
     .then(() => {
         // Start listening to the request on the defined port
@@ -37,8 +43,3 @@ AppDataSource.initialize()
     }).catch((err) => {
         console.error(err)
     });
-
-app.use('/', tasksRouter)
-app.get('/test', function (req, res) {
-    res.send('hello world')
-  })
