@@ -18,16 +18,16 @@ const port = process.env.PORT;
 
 // Database Connection
 export const AppDataSource = new DataSource({
-    type: 'mysql',
-    host: 'ap-southeast.connect.psdb.cloud',
-    port: 3306,
-    username: process.env.MYSQL_USER,
-    password: process.env.MYSQL_PASSWORD,
-    database: process.env.MYSQL_DB,
+    type: 'postgres',
+    host: 'dpg-cfgq87pa6gdvgkkjvmsg-a.singapore-postgres.render.com',
+    port: 5432,
+    username: 'admin',
+    password: 'vrnEDGendRCqnQkfsDUYhaiyl1W43rU4',
+    database: 'todo_eba8',
     entities: [Task],
     synchronize: true,
+    ssl: true,
     //synchronize our code's and table in database, it's okay to use in dev. not safe for big project. Because if we delete the code, our database will be remove or changes too! synchronize.
-    //
 })
 
 

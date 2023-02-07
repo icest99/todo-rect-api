@@ -22,7 +22,8 @@ export class Task {
     date: string;
 
     @Column( {
-        type: 'longtext',
+        type: 'varchar',
+        length: 2000,
     })
     description: string;
 
